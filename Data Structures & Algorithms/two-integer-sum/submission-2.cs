@@ -1,0 +1,20 @@
+public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        int[] indices = new int[2];
+        int n = nums.Length;
+        int difference = 0;
+
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = i + 1; j < n; j++)
+            {
+                if (nums[i] + nums[j] == target)
+                {
+                    return [i,j];
+                }
+            }
+        }
+
+        return null;
+    }
+}
